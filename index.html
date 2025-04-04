@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
   <header>
-    <nav>
+    <h1>Holden Tatlow</h1>
+    <!-- Hamburger toggle button for mobile -->
+    <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <nav id="nav-menu" role="navigation">
       <ul>
         <li><a href="https://www.patreon.com/HoldenTatlow" target="_blank">Support Me on Patreon</a></li>
         <li><a href="index.html">Home</a></li>
@@ -57,5 +61,17 @@
   <footer>
     <p>&copy; 2025 Holden Tatlow. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Get the toggle button and navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+  
+    // Add a click event to toggle the 'active' class on the navigation menu
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+  
 </body>
 </html>
