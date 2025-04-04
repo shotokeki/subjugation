@@ -171,3 +171,20 @@ footer {
 .btn:hover {
   background-color: #e08900;
 }
+@media (max-width: 768px) {
+  /* Adjust the navigation to stack vertically */
+  nav ul {
+    flex-direction: column;
+    gap: 1rem; /* Reduce gap for smaller screens */
+  }
+  
+  /* Reduce font sizes in header if needed */
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Optionally, adjust header padding/margins */
+  header {
+    padding: 1rem;
+  }
+}
