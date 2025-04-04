@@ -155,3 +155,9 @@ footer {
   font-size: 0.9rem;
   color: #999;
 }
+p {
+  text-indent: 2em; /* Indents the first line of every paragraph by 2 em units */
+}
+.hero p {
+  text-indent: 0;
+}
