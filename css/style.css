@@ -1,121 +1,100 @@
-/* Fonts: Regal & Futuristic */
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Share+Tech+Mono&display=swap');
-
-/* Global reset */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
-  background: linear-gradient(to bottom, #1a1a1a, #0b0b0b);
-  color: #e6e6e6;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
   line-height: 1.6;
-  padding: 30px;
+  padding: 20px;
 }
 
-/* Headings: ancient nobility meets power */
-h1, h2, h3 {
-  font-family: 'IM Fell English SC', serif;
-  color: #e0b23c;
-  text-shadow: 0 0 5px #552200;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+/* Header and Navigation */
+header {
+  background-color: #f4f4f4;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Paragraphs */
-p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
-/* Highlighted text blocks */
-blockquote, .highlight {
-  background: rgba(255, 255, 255, 0.05);
-  border-left: 4px solid #e63946;
-  padding: 15px 20px;
-  margin: 20px 0;
-  font-style: italic;
-  color: #ffdadb;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0;
 }
 
-/* Glowing links */
-a {
-  color: #ff5555;
-  text-decoration: none;
+nav ul li a {
+  font-size: 1rem;
+  color: #333;
   transition: color 0.3s ease;
 }
-a:hover {
-  color: #ffb700;
-  text-shadow: 0 0 8px #ff9900;
+
+nav ul li a:hover {
+  color: #007acc;
 }
 
-/* Buttons: forged power */
-.btn {
-  background: linear-gradient(to right, #990000, #ff4500);
-  color: white;
-  font-family: 'IM Fell English SC', serif;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 0 10px #ff4500;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #ff9900;
-}
-
-/* Sections with lava-glow frames */
-section {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 5px solid #ff4500;
-  padding: 25px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-section:hover {
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
-}
-
-/* Code-style titles for tech/magic blend */
-code, .tech {
-  background-color: #222;
-  color: #0ff;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: 'Share Tech Mono', monospace;
-}
-
-/* Glowing animated divider */
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #e63946, #f1fa8c, #e63946);
-  animation: pulseGlow 3s infinite;
-  margin: 40px 0;
-}
-
-/* Pulse animation to reflect energy buildup */
-@keyframes pulseGlow {
-  0% { opacity: 0.4; }
-  50% { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-
-/* Footer with somber tone */
-footer {
+/* Hero Section */
+.hero {
   text-align: center;
-  margin-top: 60px;
+  padding: 4rem 1rem;
+  background: url('../img/author-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+/* Button Style */
+.btn {
+  display: inline-block;
+  background-color: #007acc;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
   font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid #333;
-  padding-top: 20px;
+  color: #666;
 }
