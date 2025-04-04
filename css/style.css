@@ -155,7 +155,7 @@ footer {
   font-size: 0.9rem;
   color: #999;
 }
-..btn {
+.btn {
   display: block;
   width: fit-content; /* Alternatively, use width: auto; */
   margin: 20px auto;  /* This centers the block element horizontally */
