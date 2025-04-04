@@ -2,189 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Subjugation - A Cinematic Experience</title>
-  <!-- Import fonts for a regal yet futuristic look -->
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjugation | The Dark Myth of Modern Rebellion</title>
+  <!-- Link to external CSS file; make sure the file exists in the "css" folder -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Inline CSS for quick styling; you can move these rules to style.css later -->
   <style>
-    /* Global reset */
+    /* Basic reset and base styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* Base body styles */
     body {
-      background: linear-gradient(to bottom, #1a1a1a, #0b0b0b);
-      color: #e6e6e6;
-      font-family: 'Share Tech Mono', monospace;
+      font-family: 'Georgia', serif;
+      background-color: #1d1d1d;
+      color: #e0e0e0;
       line-height: 1.6;
       overflow-x: hidden;
     }
-
-    /* Cinematic Intro Screen */
-    #intro {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://source.unsplash.com/1600x900/?volcano') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: 9999;
-      animation: fadeOut 2s ease-out forwards;
-      animation-delay: 5s;
-    }
-    #intro h1 {
-      font-family: 'IM Fell English SC', serif;
-      font-size: 4rem;
-      color: #e0b23c;
-      text-shadow: 0 0 10px #552200;
-      letter-spacing: 5px;
-      margin-bottom: 20px;
-    }
-    #intro p {
-      font-size: 1.5rem;
-      color: #ff5555;
-      text-shadow: 0 0 5px #ff0000;
-    }
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-
-    /* Main Content Styles */
-    main {
-      padding: 30px;
-      margin-top: 100px;
-    }
-    h2, h3 {
-      font-family: 'IM Fell English SC', serif;
-      color: #e0b23c;
-      text-shadow: 0 0 5px #552200;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-    blockquote, .highlight {
-      background: rgba(255,255,255,0.05);
-      border-left: 4px solid #e63946;
-      padding: 15px 20px;
-      margin: 20px 0;
-      font-style: italic;
-      color: #ffdadb;
-    }
     a {
-      color: #ff5555;
       text-decoration: none;
-      transition: color 0.3s ease;
+      color: #e0e0e0;
     }
     a:hover {
-      color: #ffb700;
-      text-shadow: 0 0 8px #ff9900;
+      color: #c0392b;
+    }
+    header {
+      background-color: #111;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav ul li a {
+      font-size: 1.2rem;
+    }
+    .hero {
+      background: url('img/dark-abstract.jpg') no-repeat center center/cover;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
     }
     .btn {
-      background: linear-gradient(to right, #990000, #ff4500);
-      color: white;
-      font-family: 'IM Fell English SC', serif;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 3px;
-      box-shadow: 0 0 10px #ff4500;
-      cursor: pointer;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
+      display: inline-block;
+      background-color: #7a1f1f;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
     }
     .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #ff9900;
-    }
-    section {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-left: 5px solid #ff4500;
-      padding: 25px;
-      margin-bottom: 40px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    section:hover {
-      box-shadow: 0 0 20px rgba(255,69,0,0.3);
-    }
-    hr {
-      border: none;
-      height: 2px;
-      background: linear-gradient(to right, #e63946, #f1fa8c, #e63946);
-      animation: pulseGlow 3s infinite;
-      margin: 40px 0;
-    }
-    @keyframes pulseGlow {
-      0% { opacity: 0.4; }
-      50% { opacity: 1; }
-      100% { opacity: 0.4; }
+      background-color: #a83232;
     }
     footer {
+      background-color: #111;
       text-align: center;
-      margin-top: 60px;
+      padding: 1rem;
       font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
-      padding-top: 20px;
     }
   </style>
 </head>
 <body>
-  <!-- Cinematic Intro -->
-  <div id="intro">
-    <h1>SUBJUGATION</h1>
-    <p>A cinematic journey into chaos and rebellion</p>
-  </div>
-  
-  <!-- Main Content -->
+  <header>
+    <h1>Subjugation</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="subjugation.html">Subjugation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <section>
-      <h2>Chapter Five</h2>
+    <section class="hero">
+      <h2>The Dark Myth of Modern Rebellion</h2>
       <p>
-        Stepping forward to meet the skating figure, El searched through time and space to reach his Arsenal and select a counter...
+        In a world ruled by ruthless corporations and haunted by ancient gods, one story burns with raw intensity. Discover how power, guilt, and destiny collide in <em>Subjugation</em>—a tale where every victory is stained with sacrifice.
       </p>
-      <blockquote>
-        "These monstrosities have nothing to do with me. I'm here to put an end to the senseless exploitation and corruption..."
-      </blockquote>
-      <p>
-        ...[Further narrative content reflecting the intense, high-stakes battle and emotional turmoil]...
-      </p>
-      <button class="btn">Read More</button>
-    </section>
-    <hr>
-    <section>
-      <h3>The Battle Unfolds</h3>
-      <p>
-        The air grew uncomfortably warm as a massive blast of light erupted, shattering the silence with an explosive declaration...
-      </p>
-      <p>
-        ...[More narrative content here to draw the reader deeper into the chaos and drama]...
-      </p>
+      <a class="btn" href="subjugation.html">Learn More About Subjugation</a>
     </section>
   </main>
-  
-  <!-- Footer -->
+
   <footer>
-    &copy; 2025 Subjugation. All rights reserved.
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
-  
-  <!-- JavaScript to remove the intro screen after the fade-out -->
-  <script>
-    // Remove the intro after 7 seconds (fade-out complete)
-    setTimeout(() => {
-      document.getElementById('intro').style.display = 'none';
-    }, 7000);
-  </script>
 </body>
 </html>
