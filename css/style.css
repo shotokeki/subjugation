@@ -22,10 +22,13 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
+/* Use Montserrat for header title */
 header h1 {
-  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 nav ul {
@@ -60,9 +63,10 @@ nav ul li a:hover {
 }
 
 .hero h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .hero p {
@@ -72,22 +76,7 @@ nav ul li a:hover {
   padding: 0 1rem;
 }
 
-/* Button Style */
-.btn {
-  display: inline-block;
-  background-color: #007acc;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #005fa3;
-}
+/* Button removed as per your instructions */
 
 /* Footer */
 footer {
