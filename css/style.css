@@ -1,89 +1,21 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Base Styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* Header and Navigation */
-header {
-  background-color: #f4f4f4;
-  padding: 1.5rem 0;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Use Montserrat for header title */
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 0;
-}
-
-nav ul li a {
-  font-size: 1rem;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #007acc;
-}
-
-/* Hero Section */
 .hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: url('../img/author-bg.jpg') no-repeat center center/cover;
-  color: #fff;
+  /* Use a background image if available; otherwise, fallback to a dark color */
+  background: url('../img/author-bg.jpg') no-repeat center center/cover, #222;
+  /* The "#222" is a dark fallback background color */
+  color: #fff; /* White text */
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.hero h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
 .hero p {
+  color: #fff; /* Ensure paragraph text is white */
   font-size: 1.2rem;
   max-width: 800px;
   margin-bottom: 2rem;
   padding: 0 1rem;
-}
-
-/* Button removed as per your instructions */
-
-/* Footer */
-footer {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #666;
 }
