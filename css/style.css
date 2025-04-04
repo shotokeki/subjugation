@@ -1,43 +1,116 @@
-/* Reset + Base */
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset some defaults */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Body styles with a modern fantasy background */
 body {
-  font-family: 'Georgia', serif;
-  background: #fdfcf9;
-  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4b79a1);
+  color: #f5f5f5;
   line-height: 1.6;
-  padding: 2rem;
+  padding: 20px;
 }
-header nav ul {
+
+/* Headings with a touch of fantasy elegance */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  color: #e0b23c;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling for easy reading */
+p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Link styles with a golden glow */
+a {
+  color: #e0b23c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  margin-bottom: 3rem;
 }
-a {
-  text-decoration: none;
-  color: #333;
+
+nav ul li {
+  margin: 0 15px;
 }
-a:hover {
-  color: #7a1f1f;
+
+nav ul li a {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
-.hero {
+
+/* Header styling for a grand introduction */
+header {
   text-align: center;
-  padding: 5rem 2rem;
+  margin-bottom: 40px;
 }
-.hero h1 {
+
+header h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
+
+/* Section styling for content blocks */
+section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Button styling for interactive elements */
 .btn {
-  margin-top: 2rem;
-  display: inline-block;
-  background: #7a1f1f;
-  color: white;
-  padding: 0.75rem 1.5rem;
+  background-color: #e0b23c;
+  color: #2c3e50;
+  padding: 10px 20px;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Cinzel', serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cfa02b;
+}
+
+/* Horizontal rule with a fantasy accent */
+hr {
+  border: 0;
+  height: 2px;
+  background: #e0b23c;
+  margin: 40px 0;
+}
+
+/* Footer styling for a subtle close */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #ccc;
 }
