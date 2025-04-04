@@ -1,119 +1,121 @@
-/* Import futuristic fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+/* Fonts: Regal & Futuristic */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Share+Tech+Mono&display=swap');
 
-/* Reset basic elements */
+/* Global reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base body styles: dark background with a clean layout */
 body {
-  font-family: 'Roboto', sans-serif;
-  background: #0f0f0f;
-  color: #e0e0e0;
+  background: linear-gradient(to bottom, #1a1a1a, #0b0b0b);
+  color: #e6e6e6;
+  font-family: 'Share Tech Mono', monospace;
   line-height: 1.6;
-  padding: 20px;
+  padding: 30px;
 }
 
-/* Headings styled for a high-tech vibe */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', sans-serif;
-  color: #00ffea;
-  text-transform: uppercase;
+/* Headings: ancient nobility meets power */
+h1, h2, h3 {
+  font-family: 'IM Fell English SC', serif;
+  color: #e0b23c;
+  text-shadow: 0 0 5px #552200;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 255, 234, 0.7);
+  text-transform: uppercase;
 }
 
-/* Paragraphs for clean readability */
+/* Paragraphs */
 p {
-  margin-bottom: 15px;
   font-size: 1.1rem;
+  margin-bottom: 15px;
 }
 
-/* Hyperlink styles with a neon glow effect */
+/* Highlighted text blocks */
+blockquote, .highlight {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #e63946;
+  padding: 15px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #ffdadb;
+}
+
+/* Glowing links */
 a {
-  color: #00ffea;
+  color: #ff5555;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #00ffea;
-  text-shadow: 0 0 5px #00ffea;
+  color: #ffb700;
+  text-shadow: 0 0 8px #ff9900;
 }
 
-/* Navigation bar with a dark, semi-transparent background */
-nav {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-nav ul li a {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/* Sections with a subtle glassmorphism effect */
-section {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 30px;
-  backdrop-filter: blur(8px);
-}
-
-/* Button design: neon gradient and interactive hover effects */
+/* Buttons: forged power */
 .btn {
-  display: inline-block;
-  background: linear-gradient(45deg, #00ffea, #0078ff);
-  border: none;
-  border-radius: 50px;
-  color: #0f0f0f;
+  background: linear-gradient(to right, #990000, #ff4500);
+  color: white;
+  font-family: 'IM Fell English SC', serif;
   padding: 10px 20px;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #ff4500;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 234, 0.8);
+  box-shadow: 0 0 15px #ff9900;
 }
 
-/* Footer with a balanced, high-tech look */
+/* Sections with lava-glow frames */
+section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #ff4500;
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
+}
+
+/* Code-style titles for tech/magic blend */
+code, .tech {
+  background-color: #222;
+  color: #0ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Glowing animated divider */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #e63946, #f1fa8c, #e63946);
+  animation: pulseGlow 3s infinite;
+  margin: 40px 0;
+}
+
+/* Pulse animation to reflect energy buildup */
+@keyframes pulseGlow {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* Footer with somber tone */
 footer {
   text-align: center;
-  padding: 20px;
+  margin-top: 60px;
   font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  margin-top: 50px;
-}
-
-/* Subtle pulsing animation for interactive elements */
-@keyframes pulse {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse 1.5s infinite;
+  color: #888;
+  border-top: 1px solid #333;
+  padding-top: 20px;
 }
